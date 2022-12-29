@@ -55,6 +55,7 @@ def get_args():
     return args
 
 def get_config(config_path="config/config.yml"):
+    print(config_path)
     with open(config_path, "r") as setting:
         print(setting)
         config = yaml.load(setting, Loader=yaml.FullLoader)
