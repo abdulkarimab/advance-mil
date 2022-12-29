@@ -49,15 +49,15 @@ def multi_run_main(config):
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--config',  required=False, type=str, help='path to the config file')
+    parser.add_argument('-f','--config',  required=False, type=str, help='path to the config file')
     parser.add_argument('--multi_run', action='store_true', help='flag: multi run')
     args = vars(parser.parse_args())
     return args
 
 def get_config(config_path="config/config.yml"):
-    print(config_path)
+    print('config_path', config_path)
     with open(config_path, "r") as setting:
-        print(setting)
+        print('setting', setting)
         config = yaml.load(setting, Loader=yaml.FullLoader)
     return config
 
